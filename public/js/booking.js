@@ -26,7 +26,7 @@ async function bookTime() {
         comment: comment1
     }
     
-    const response = await fetch('/reservation', {
+    const response = await fetch('https://finalbackend-rli0.onrender.com/reservation', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -43,4 +43,5 @@ async function bookTime() {
         window.location.href='/answer'
     }
     
+
 }
