@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Amphora</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="full">
+            <div class="page">
+                <img src="images/website/background.png" alt="restaurant kitchen photo" class="background">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Amphora</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="/menu">Menu</a>
+                        <a class="nav-link" href="/booking">Booking</a>
+                        <a class="nav-link" href="/delivery">Delivery</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+                <div class="center front">
+                  <p class="name">Amphora</p>
+                  <p class="desc">Where contemporary cuisine meets a warm, inviting atmosphere.</p>
+                  <div class="buttons">
+                    <button class="btn book" id="bookID">Book Reservation</button>
+                    <button class="btn menu" id="menuID">Menu</button>
+                  </div>
+                </div>
+            </div>
+            <div class="about">
+              <img src="images/website/chef3.jpg" alt="chef cooking a meal" class="chef d-none d-lg-block">
+              <div class="atext">
+                <p class="under">_____________________________________________________</p>
+                <h1>Our Restaurant</h1>
+                <p>Welcome to the best dining experience! <br> <span style="color:#d53c3c;font-style:oblique;"> The Amphora Restaurant</span>, the recipient of <span style="text-decoration: underline #d53c3c ;">Michelin Stars</span>, is where the finest cuisine is served and enjoyed in the most spectacular settings. The most experienced chefs from all around the world have gathered to <span style="text-decoration: underline #d53c3c ;">prepare your paradise.</span></p>
+                <p class="under">_____________________________________________________</p>
+              </div>
+            </div>
+            <div class="extra"></div>
+            <div class="menupage">
+              <img src="/images/website/menupage.png" alt="view menu list categories" class="menubackground">
+              <p class="viewmenu">View Menu</p>
+              <div class="row row-cols-md-4  g-4 menucards">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="images/website/starters.jpg" class="card-img" alt="soup for starters photo">
+                    <div class="card-body">
+                      <a href="/menu#starting"><h5 class="card-title">Starters</h5></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100" >
+                    <img src="images/website/main.jpg" class="card-img" alt="lobster for main course photo">
+                    <div class="card-body">
+                      <a href="/menu#dishes"><h5 class="card-title">Mains</h5></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100" >
+                    <img src="images/website/drinks.jpg" class="card-img" alt="drink">
+                    <div class="card-body">
+                      <a href="/menu#drinker"><h5 class="card-title">Drinks</h5></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100" >
+                    <img src="images/website/dessert.jpg" class="card-img" alt="cake for dessert photo">
+                    <div class="card-body">
+                      <a href="/menu#deserting"><h5 class="card-title">Desserts</h5></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="special">
+              <img src="/images/website/special.png" alt="chef's special black background" class="specialbackground">
+              <video class="d-none d-lg-block" controls loop>
+              <source src="images/website/beef.MP4" type="video/mp4">
+              </video>
+              <div class="stext">
+                <h1>Chef's Special</h1>
+                <h3>Beef Wellington</h3>
+                <p>rare cooked steak with mushrooms in the middle all in a crepe</p>
+                <button class="btn book" onclick="addToCart(83)">Order Now</button>
+              </div>
+            </div>
+            <div class="reviews">
+              <div class="scroller" data-speed="slow">
+                <ul class="tag-list scroller__inner">
+                  <li>“The menu is thoughtfully curated, and every dish delivers on quality and taste.”</li>
+                  <li>“A truly luxurious experience.”</li>
+                  <li>“From the first bite to the last, everything was perfectly balanced and beautifully prepared.”</li>
+                  <li>“Refined atmosphere and consistently outstanding food.”</li>
+                  <li>“Sophisticated cuisine served with calm professionalism.”</li>
+                  <li>“A composed dining experience from start to finish.”</li>
+                  <li>“An understated approach that feels genuinely premium.”</li>
+                </ul>
+              </div>
+              <div class="scroller" data-speed="slow" data-direction="left">
+                <ul class="tag-list scroller__inner">
+                  <li>“Intimate, elegant, and consistent excellence.”</li>
+                  <li>“A refined dining experience with flavors that feel both creative and comforting.”</li>
+                  <li>“From the reception to dessert, everything felt curated and thoughtful.”</li>
+                  <li>“Elegant dishes with flawless, confident execution.”</li>
+                  <li>“High-end dining without any unnecessary excess.”</li>
+                  <li>“Quality, balance, and exceptional attention to detail.”</li>
+                  <li>“Subtle presentation that highlights excellent ingredients.”</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mapdiv">
+              <div class="maptext1">
+                <h1>Find Us Here</h1>
+              </div>
+            </div>
+            <div id="map">
+            </div>
+            <div class="mapdiv">
+              <div class="maptext">
+                <div class="maptexts">
+                  <p class="redtext">Amphora Restaurant</p>
+                  <p>Mangilik El, C1</p>
+                  <p>Astana, Kazakhstan</p>
+                </div>
+              </div>
+            </div>
+            <div class="extra1"></div>
+            <div class="extra1"></div>
+            <div class="extra1"></div>
+            <div class="extra1"></div>
+            <div class="footer">
+              <img src="/images/website/footer.png" alt="footer red carpet background" class="footerbackground">
+              <div class="brand-name">
+                <h1>Amphora</h1>
+                <p>© All Rights Reserved</p>
+              </div>
+              <div class="others">
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/menu">Our Menu</a></li>
+                  <li><a href="/booking">Book a Reservation</a></li>
+                  <li><a href="/delivery">Delivery</a></li>
+                </ul>
+                <ul>
+                  <li>Contact Us</li>
+                  <li><p class="phone">+77011234567</p></li>
+                  <li>
+                    <div class="icons">
+                      <img src="images/website/instagram.png" alt="instagram icon" class="icon">
+                      <img src="images/website/whatsapp.png" alt="whatsapp icon" class="icon">
+                      <img src="images/website/gps.png" alt="gps as 2gix icon" class="icon">
+                      <img src="images/website/facebook.png" alt="facebook icon" class="icon">
+                    </div>
+                  </li>
+                  <li class="address">Mangilik El C1, Astana</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="/js/index.js"></script>
+    </body>
+</html>
