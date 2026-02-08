@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
 
-    const res = await fetch("/api/auth/login", {
+    const res = await fetch("https://finalbackend-rli0.onrender.com/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.removeItem("redirectAfterLogin")
       window.location.href = redirect
     } else {
-      window.location.href = "/"
+      window.location.href = "index.html"
     }
   })
 })
+
