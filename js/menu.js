@@ -2,7 +2,7 @@
 
 async function getBreakfast() {
     const breakfast = document.getElementById('breakfast')
-    const response = await fetch('/type/breakfast')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/breakfast')
     const foods= await response.json()
 
     let html = ''
@@ -22,7 +22,7 @@ async function getBreakfast() {
 }getBreakfast()
 async function getSoups() {
     const soup = document.getElementById('soups')
-    const response = await fetch('/type/soups')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/soups')
     const foods= await response.json()
     
     let html = ''
@@ -42,7 +42,7 @@ async function getSoups() {
 }getSoups()
 async function getAppetizers() {
     const appetizers = document.getElementById('appetizers')
-    const response = await fetch('/type/appetizers')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/appetizers')
     const foods= await response.json()
     
     let html = ''
@@ -62,7 +62,7 @@ async function getAppetizers() {
 }getAppetizers()
 async function getmains() {
     const mains = document.getElementById('mains')
-    const response = await fetch('/type/mains')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/mains')
     const foods= await response.json()
 
     let html = ''
@@ -82,7 +82,7 @@ async function getmains() {
 }getmains()
 async function getsalads() {
     const salad = document.getElementById('salads')
-    const response = await fetch('/type/salads')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/salads')
     const foods= await response.json()
     
     let html = ''
@@ -102,7 +102,7 @@ async function getsalads() {
 }getsalads()
 async function getseafood() {
     const seafood = document.getElementById('seafood')
-    const response = await fetch('/type/seafood')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/seafood')
     const foods= await response.json()
     
     let html = ''
@@ -122,7 +122,7 @@ async function getseafood() {
 }getseafood()
 async function getfastfood() {
     const fastfood = document.getElementById('fastfood')
-    const response = await fetch('/type/fastfood')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/fastfood')
     const foods= await response.json()
     
     let html = ''
@@ -142,7 +142,7 @@ async function getfastfood() {
 }getfastfood()
 async function gettea() {
     const tea = document.getElementById('tea')
-    const response = await fetch('/type/tea')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/tea')
     const foods= await response.json()
 
     let html = ''
@@ -162,7 +162,7 @@ async function gettea() {
 }gettea()
 async function getcoffee() {
     const coffee = document.getElementById('coffee')
-    const response = await fetch('/type/coffee')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/coffee')
     const foods= await response.json()
     
     let html = ''
@@ -182,7 +182,7 @@ async function getcoffee() {
 }getcoffee()
 async function getmilkshake() {
     const milkshake = document.getElementById('milkshake')
-    const response = await fetch('/type/milkshake')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/milkshake')
     const foods= await response.json()
     
     let html = ''
@@ -202,7 +202,7 @@ async function getmilkshake() {
 }getmilkshake()
 async function getsoda() {
     const soda = document.getElementById('soda')
-    const response = await fetch('/type/soda')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/soda')
     const foods= await response.json()
     
     let html = ''
@@ -222,7 +222,7 @@ async function getsoda() {
 }getsoda()
 async function geticecream() {
     const icecream = document.getElementById('icecream')
-    const response = await fetch('/type/icecream')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/icecream')
     const foods= await response.json()
     
     let html = ''
@@ -242,7 +242,7 @@ async function geticecream() {
 }geticecream()
 async function getcake() {
     const cake = document.getElementById('cake')
-    const response = await fetch('/type/cake')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/cake')
     const foods= await response.json()
     
     let html = ''
@@ -262,7 +262,7 @@ async function getcake() {
 }getcake()
 async function getotherdessert() {
     const otherdessert = document.getElementById('otherdessert')
-    const response = await fetch('/type/otherdessert')
+    const response = await fetch('https://finalbackend-rli0.onrender.com/type/otherdessert')
     const foods= await response.json()
     
     let html = ''
@@ -291,7 +291,7 @@ async function addToCart(foodId){
             console.log(cart)
         }
         else {
-            const response = await fetch(`/food/${foodId}`)
+            const response = await fetch(`https://finalbackend-rli0.onrender.com/food/${foodId}`)
 
             if(!response.ok){
                 console.error('Failed to retrieve')
@@ -327,3 +327,4 @@ function showToast(message) {
   toastEl.querySelector('.toast-body').textContent = message
   toast.show()
 }
+
