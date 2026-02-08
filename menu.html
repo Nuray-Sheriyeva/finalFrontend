@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Amphora</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/menu.css">
+
+    </head>
+    <body>
+        <div class="full">
+            <div class="page">
+                <img src="images/website/background.png" alt="restaurant kitchen photo" class="background">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Amphora</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link active"  aria-current="page"  href="/menu">Menu</a>
+                        <a class="nav-link" href="/booking">Booking</a>
+                        <a class="nav-link" href="/delivery">Delivery</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+                <div class="fronttext">
+                  <h1>View Our Menu</h1>
+                </div>
+            </div>
+            <div class="menupagediv">
+                <div class="first">
+                  <h2 class="section-title" id="starting">First Course</h2>
+                  <div class="typechooser">
+                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types active" id="pills-breakfast-tab" data-bs-toggle="pill" data-bs-target="#pills-breakfast" type="button" role="tab" aria-controls="pills-breakfast" aria-selected="true">Breakfast</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-soups-tab" data-bs-toggle="pill" data-bs-target="#pills-soups" type="button" role="tab" aria-controls="pills-soups" aria-selected="false">Soups</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-appetizers-tab" data-bs-toggle="pill" data-bs-target="#pills-appetizers" type="button" role="tab" aria-controls="pills-appetizers" aria-selected="false">Appetizers</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show insides active " id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="breakfast"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-soups" role="tabpanel" aria-labelledby="pills-soups-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="soups"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-appetizers" role="tabpanel" aria-labelledby="pills-appetizers-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="appetizers"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hotstuff">
+                  <h2 class="section-title" id="dishes">Main Course</h2>
+                  <div class="typechooser">
+                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types active" id="pills-mains-tab" data-bs-toggle="pill" data-bs-target="#pills-mains" type="button" role="tab" aria-controls="pills-mains" aria-selected="true">Mains</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-salads-tab" data-bs-toggle="pill" data-bs-target="#pills-salads" type="button" role="tab" aria-controls="pills-salads" aria-selected="false">Salads</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-seafood-tab" data-bs-toggle="pill" data-bs-target="#pills-seafood" type="button" role="tab" aria-controls="pills-seafood" aria-selected="false">Seafood</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-fastfood-tab" data-bs-toggle="pill" data-bs-target="#pills-fastfood" type="button" role="tab" aria-controls="pills-fastfood" aria-selected="false">Fast food</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show insides active " id="pills-mains" role="tabpanel" aria-labelledby="pills-mains-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="mains"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-salads" role="tabpanel" aria-labelledby="pills-salads-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="salads"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-seafood" role="tabpanel" aria-labelledby="pills-seafood-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="seafood"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-fastfood" role="tabpanel" aria-labelledby="pills-fastfood-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="fastfood"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="drinking">
+                  <h2 class="section-title" id="drinker">Drinks</h2>
+                  <div class="typechooser">
+                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types active" id="pills-tea-tab" data-bs-toggle="pill" data-bs-target="#pills-tea" type="button" role="tab" aria-controls="pills-tea" aria-selected="true">Tea</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-coffee-tab" data-bs-toggle="pill" data-bs-target="#pills-coffee" type="button" role="tab" aria-controls="pills-coffee" aria-selected="false">Coffee</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-milkshake-tab" data-bs-toggle="pill" data-bs-target="#pills-milkshake" type="button" role="tab" aria-controls="pills-milkshake" aria-selected="false">Milkshake</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-soda-tab" data-bs-toggle="pill" data-bs-target="#pills-soda" type="button" role="tab" aria-controls="pills-soda" aria-selected="false">Soda</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show insides active " id="pills-tea" role="tabpanel" aria-labelledby="pills-tea-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="tea"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-coffee" role="tabpanel" aria-labelledby="pills-coffee-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="coffee"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-milkshake" role="tabpanel" aria-labelledby="pills-milkshake-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="milkshake"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-soda" role="tabpanel" aria-labelledby="pills-soda-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="soda"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="desert">
+                  <h2 class="section-title" id="deserting">Desserts</h2>
+                  <div class="typechooser">
+                    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types active" id="pills-icecream-tab" data-bs-toggle="pill" data-bs-target="#pills-icecream" type="button" role="tab" aria-controls="pills-icecream" aria-selected="true">Ice cream</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-cake-tab" data-bs-toggle="pill" data-bs-target="#pills-cake" type="button" role="tab" aria-controls="pills-cake" aria-selected="false">Cake</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link types" id="pills-otherdessert-tab" data-bs-toggle="pill" data-bs-target="#pills-otherdessert" type="button" role="tab" aria-controls="pills-otherdessert" aria-selected="false">Other desserts</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show insides active " id="pills-icecream" role="tabpanel" aria-labelledby="pills-icecream-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="icecream"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-cake" role="tabpanel" aria-labelledby="pills-cake-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="cake"></div>
+                    </div>
+                    <div class="tab-pane fade insides" id="pills-otherdessert" role="tabpanel" aria-labelledby="pills-otherdessert-tab" tabindex="0">
+                      <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-5" id="otherdessert"></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="footer">
+              <div class="brand-name">
+                <h1>Amphora</h1>
+                <p>© All Rights Reserved</p>
+              </div>
+              <div class="others">
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/menu">Our Menu</a></li>
+                  <li><a href="/booking">Book a Reservation</a></li>
+                  <li><a href="/delivery">Delivery</a></li>
+                </ul>
+                <ul>
+                  <li>Contact Us</li>
+                  <li><p class="phone">+77011234567</p></li>
+                  <li>Find us on</li>
+                  <li>
+                    <div class="icons">
+                      <img src="images/website/instagram.png" alt="instagram icon" class="icon">
+                      <img src="images/website/whatsapp.png" alt="whatsapp icon" class="icon">
+                      <img src="images/website/gps.png" alt="gps as 2gix icon" class="icon">
+                      <img src="images/website/facebook.png" alt="facebook icon" class="icon">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">Amphora</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+              Item added to cart!
+            </div>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="/js/menu.js"></script>
+    </body>
+</html>
