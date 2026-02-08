@@ -1,7 +1,7 @@
 const token = localStorage.getItem("token")
 if (!token) {
   localStorage.setItem("redirectAfterLogin", window.location.pathname)
-  window.location.href = "/login.html"
+  window.location.href = "login.html"
 }
 
 const bookbutton = document.getElementById('submit')
@@ -26,7 +26,7 @@ async function bookTime() {
         comment: comment1
     }
     
-    const response = await fetch('/reservation', {
+    const response = await fetch('https://finalbackend-rli0.onrender.com/reservation', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -40,7 +40,8 @@ async function bookTime() {
     }
     
     if(response.ok){
-        window.location.href='/answer'
+        window.location.href='answer.html'
     }
     
+
 }
