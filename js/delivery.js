@@ -1,7 +1,7 @@
 const token = localStorage.getItem("token")
 if (!token) {
   localStorage.setItem("redirectAfterLogin", window.location.pathname)
-  window.location.href = "/login.html"
+  window.location.href = "login.html"
 }
 
 let cart = localStorage.getItem("cart")
@@ -122,4 +122,5 @@ function Answer() {
                   <h1>Your Delivery order has been saved!</h1>`
     localStorage.setItem("cart", "[]")
     loadCart()
+
 }
