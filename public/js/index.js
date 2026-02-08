@@ -27,7 +27,7 @@ function addAnimation() {
 
 async function getWeather() {
     const city = "Astana"
-    const response = await fetch(`http://localhost:3000/api/weather?city=${city}`)
+    const response = await fetch(`https://finalbackend-rli0.onrender.com/api/weather?city=${city}`)
     
     if (!response.ok) {
       const errorData = await response.json();
@@ -74,7 +74,7 @@ async function addToCart(foodId){
             console.log(cart)
         }
         else {
-            const response = await fetch(`/food/${foodId}`)
+            const response = await fetch(`https://finalbackend-rli0.onrender.com/food/${foodId}`)
 
             if(!response.ok){
                 console.error('Failed to retrieve')
@@ -101,4 +101,5 @@ async function addToCart(foodId){
         }
     
    localStorage.setItem("cart", JSON.stringify(cart))
+
 }
