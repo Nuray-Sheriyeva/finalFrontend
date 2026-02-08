@@ -1,0 +1,208 @@
+.background {
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:-1;
+}
+body {
+    font-family: "Bellefair", serif;
+    overflow-x: hidden;
+    background-color: black;
+}
+.navbar-brand {
+    font-size: clamp(50px, 4vw, 90px);
+    padding-left:25px;
+}
+.navbar-nav {
+    font-size: clamp(25px, 2.3vw, 50px);
+    padding-right: 20px;
+}
+.page {
+    padding-top: 20px;
+    align-items: center;
+    height: 1149px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+.navbar-dark .navbar-nav .nav-link.active {
+    color:#d53c3c;
+}
+.nav-link {
+    margin-right: 10px;
+}
+
+.blackpage {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    gap:10%;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height:1000px;
+}
+.drink {
+    flex: 1;
+    width:40vw;
+    border-radius: 30px;
+}
+.reservation {
+    flex: 1;
+}
+.times {
+    display: flex;
+    gap:10%;
+}
+.dating {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+.timing {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+.contacts {
+    display: flex;
+    gap: 10%;
+}
+.emailing {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+.phoning {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+.bookering {
+    display: flex;
+    flex-flow: column;
+}
+.commenting {
+    display: flex;
+    flex-flow: column;
+}
+.comment {
+    height: 150px;
+}
+.reservation h1 {
+    font-size: clamp(62px, 5.7vw, 100px);
+    color: white;
+    margin-bottom: 30px;
+}
+label {
+    font-size: clamp(25px, 2vw, 35px);
+    color:white;
+}
+.reservation div {
+    margin-bottom: 13px;
+}
+input {
+    border-radius: 15px;
+    border: 0;
+    padding:10px;
+    padding-left: 15px;
+    font-size: clamp(20px, 1.5vw, 30px);
+    color:white ;
+    background-color:#2e0d16 ;
+}
+input[type="tel"]{
+    color:white;
+}
+::placeholder {
+    color:#620f25;
+}
+.comment {
+    padding-top: 0;
+}
+textarea {
+    border-radius: 15px;
+    border: 0;
+    padding:10px;
+    padding-left: 15px;
+    font-size: clamp(20px, 1.5vw, 30px);
+    color:#ffffff;
+    background-color:#2e0d16 ;
+    width: 100%;
+    resize: vertical;  
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+button {
+    color:#b23a48;
+    background-color: white;
+    border-radius: 20px;
+    border:0;
+}
+.button {
+    display:flex;
+    flex:1;
+    color:#b23a48;
+    background-color: white;
+    border-radius: 20px;
+    border:0;
+    justify-content: center;
+    font-size:clamp(30px, 2.5vw, 50px) ;
+    margin-top: 40px;
+}
+.footerbackground {
+    width:100vw;
+    height:55vh;
+    object-fit:cover;
+    position: absolute;
+    top: 1100px;
+    left: 0;
+    z-index:-1;
+}
+.icon {
+    width: 30px;
+    background-color: white;
+    border-radius: 51%;
+    border: 0px;
+}
+
+.brand-name {
+    color:white;
+    position: relative;
+    bottom:65px;
+    padding-left: 100px;
+}
+.brand-name h1 {
+    font-size: clamp(60px, 6vw, 90px);
+    margin-bottom: 0;
+    text-shadow: 10px 10px 10px black;
+}
+.brand-name p {
+    font-size: clamp(6px, 0.8vw, 13px);
+    margin-top: 0;
+}
+.others {
+    display:flex;
+    justify-content: right;
+    margin-right: 200px;
+    color:white;
+}
+.others ul {
+    list-style-type: none;
+    margin-left: 60px;
+}
+.others li {
+    font-size: 40px;
+}
+.others a {
+    text-decoration: none;
+    color: white;
+}
+.phone {
+    font-size: 25px;
+    margin-bottom: 0;
+    color:#b23a48;
+}
+
