@@ -32,14 +32,14 @@
                 <div class="authorise" id="replace">
                   <h1>Log out</h1>
                   <p>You can still order, if you are logged in!</p>
-                  <form method="POST" action="/logout">
+                  <form method="POST" action="https://finalbackend-rli0.onrender.com/logout">
                       <button type="submit" id="logoutBtn">Log out</button>
                   </form>
                   <div class="texts"><p>Please stay? </p></div>
                 </div>
             </div>
             <div class="footer">
-              <img src="/images/website/footer.png" alt="footer red carpet background" class="footerbackground">
+              <img src="images/website/footer.png" alt="footer red carpet background" class="footerbackground">
               <div class="brand-name">
                 <h1>Amphora</h1>
                 <p>© All Rights Reserved</p>
@@ -71,11 +71,12 @@
         <script>
           document.getElementById('logoutBtn').addEventListener('click', async () => {
             localStorage.clear()
-            await fetch('/logout', { method: 'POST' })
-            window.location.href = '/'
+            await fetch('https://finalbackend-rli0.onrender.com/logout', { method: 'POST' })
+            window.location.href = 'index.html'
           })
         </script>
     </body>
 
 </html>
+
 
