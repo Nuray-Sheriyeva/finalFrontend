@@ -1,4 +1,4 @@
-fetch('/api/last-booking')
+fetch('https://finalbackend-rli0.onrender.com/api/last-booking')
     .then(res => res.json())
     .then(booking => {
         if (!booking) {
@@ -15,4 +15,5 @@ fetch('/api/last-booking')
         document.getElementById('ans-time').innerHTML =  `
         ${booking.time}
         `
+
     })
