@@ -34,7 +34,7 @@ body {
     margin-right: 10px;
 }
 .footer{
-    background: url('/images/website/menufooter.png');
+    background: url('images/website/menufooter.png');
     height:500px;
 }
 .icon {
@@ -254,4 +254,5 @@ input[type="radio"] {
     align-items: center;
     font-size: clamp(10px, 1.5vw, 30px);
     padding-top:50px;
+
 }
