@@ -8,44 +8,40 @@ const bookbutton = document.getElementById('submit')
 bookbutton.addEventListener('click', bookTime)
 
 async function bookTime() {
-    console.log('Book button clicked')
-
-    const date1 = document.getElementById('dateinput').value
-    const time1 = document.getElementById('timeinput').value
-    const booker1 = document.getElementById('nameinput').value
-    const email1 = document.getElementById('emailinput').value
-    const phone1 = document.getElementById('phoneinput').value
-    const comment1 = document.getElementById('commentinput').value
+    console.log('Book button clicked');
 
     const bookingData = {
-        booker: booker1,
-        time: time1,
-        date: date1,
-        email: email1,
-        phone: phone1,
-        comment: comment1
-    }
+        booker: document.getElementById('nameinput').value,
+        time: document.getElementById('timeinput').value,
+        date: document.getElementById('dateinput').value,
+        email: document.getElementById('emailinput').value,
+        phone: document.getElementById('phoneinput').value,
+        comment: document.getElementById('commentinput').value
+    };
     
-    // 1. Get the token you saved during login
-  const token = localStorage.getItem('token'); 
+    try {
+        const response = await fetch('/reservation', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(bookingData),
+            // CRITICAL: This sends your session cookie to Render
+            credentials: 'include' 
+        });
 
-  const response = await fetch('https://finalbackend-rli0.onrender.com/reservation', {
-      method: "POST",
-      headers: {
-          'Content-Type': 'application/json',
-          // 2. Add this line to "prove" who you are to the server
-          'Authorization': `Bearer ${token}` 
-      },
-      body: JSON.stringify(bookingData)
-  });
-    if (!response.ok) {
-        console.error("Reservation failed")
-        return res.status(404).json('Reservation failed')
+        if (response.ok) {
+            // Save data locally so answer.html can show it immediately
+            localStorage.setItem('lastBooker', bookingData.booker);
+            localStorage.setItem('lastTime', bookingData.time);
+            
+            window.location.href = '/answer';
+        } else {
+            const errorMsg = await response.json();
+            console.error("Reservation failed:", errorMsg);
+            alert("Session expired or Login required. Please log in again.");
+        }
+    } catch (error) {
+        console.error("Network error:", error);
     }
-    
-    if(response.ok){
-        window.location.href='answer.html'
-    }
-    
-
 }
