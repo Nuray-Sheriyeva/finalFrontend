@@ -26,14 +26,18 @@ async function bookTime() {
         comment: comment1
     }
     
-    const response = await fetch('https://finalbackend-rli0.onrender.com/reservation', {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(bookingData)
-    })
+    // 1. Get the token you saved during login
+  const token = localStorage.getItem('token'); 
 
+  const response = await fetch('https://finalbackend-rli0.onrender.com/reservation', {
+      method: "POST",
+      headers: {
+          'Content-Type': 'application/json',
+          // 2. Add this line to "prove" who you are to the server
+          'Authorization': `Bearer ${token}` 
+      },
+      body: JSON.stringify(bookingData)
+  });
     if (!response.ok) {
         console.error("Reservation failed")
         return res.status(404).json('Reservation failed')
