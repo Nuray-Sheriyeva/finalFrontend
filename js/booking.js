@@ -35,7 +35,7 @@ async function bookTime() {
             localStorage.setItem('lastBooker', bookingData.booker);
             localStorage.setItem('lastTime', bookingData.time);
             
-            window.location.href = '/answer';
+            window.location.href = 'answer.html';
         } else {
             const errorMsg = await response.json();
             console.error("Reservation failed:", errorMsg);
