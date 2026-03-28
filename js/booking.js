@@ -20,7 +20,7 @@ async function bookTime() {
     };
     
     try {
-        const response = await fetch('/reservation', {
+        const response = await fetch('https://finalbackend-rli0.onrender.com/reservation', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
