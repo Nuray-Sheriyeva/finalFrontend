@@ -34,7 +34,7 @@ body {
     margin-right: 10px;
 }
 .footer{
-    background: url('images/website/menufooter.png');
+    background: url('../images/website/menufooter.png');
     height:500px;
 }
 .icon {
