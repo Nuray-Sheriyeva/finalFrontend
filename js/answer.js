@@ -1,19 +1,12 @@
-fetch('https://finalbackend-rli0.onrender.com/api/last-booking')
-    .then(res => res.json())
-    .then(booking => {
-        if (!booking) {
-            window.location.href ='index.html'
-            return
-        }
+// Pull the data we just saved in booking.js
+const bookerName = localStorage.getItem('lastBooker');
+const bookerTime = localStorage.getItem('lastTime');
 
-        document.getElementById('ans-name').innerHTML = `
-        ${booking.booker}
-        `
-        document.getElementById('ans-date').innerHTML =  `
-        ${booking.date}
-        `
-        document.getElementById('ans-time').innerHTML =  `
-        ${booking.time}
-        `
-
-    })
+if (!bookerName) {
+    window.location.href = '/';
+} else {
+    // Inject the message into your HTML elements
+    document.getElementById('ans-name').innerHTML = `Dear, ${bookerName}!`;
+    document.getElementById('ans-time').innerHTML = `Your reservation at Amphora was succesfully saved.
+    We will be ready to meet you at ${bookerTime}`;
+}
